@@ -17,7 +17,7 @@ python3 buggyds.py test
 ```
 3. You will get the following exception:
 ```
-zreszela@pc255:~/workspace/tango-dynattrs (main)> python3 buggyds.py zreszela
+zreszela@pc255:~/workspace/tango-dynattrs (main)> python3 buggyds.py test
 Create dynamic attribute: SecondValue                                                                                                      
 Create dynamic attribute: ThirdValue                                                                                                       
 Create dynamic attribute: FirstValue                                                                                                       
