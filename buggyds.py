@@ -12,7 +12,7 @@ class BuggyDS(Device):
         self.debug_stream("In init_device()")
         self.get_device_properties(self.get_device_class())
         self.AttrA = {
-            "FirstValue": #causes trouble if different types, or different R / RW
+            "FirstValue":  # causes trouble if different types, or different R / RW
                 {"Type": PyTango.DevDouble,
                  "Access": AttrWriteType.READ_WRITE,
                  "r_meth": self.read_1_a,
@@ -24,7 +24,7 @@ class BuggyDS(Device):
                  "r_meth": self.read_2_a,
                  "w_meth": self.write_2_a,
                  },
-            "ThirdValue": #must be read-only, can have different names
+            "ThirdValue":  # must be read-only, can have different names
                 {"Type": PyTango.DevDouble,
                  "Access": AttrWriteType.READ,
                  "r_meth": self.read_3_a,
@@ -50,10 +50,11 @@ class BuggyDS(Device):
             attr.set_disp_level(DispLevel.OPERATOR)
             try:
                 if "w_meth" in params:
-                    self.add_attribute(attr, r_meth=params["r_meth"], w_meth=params["w_meth"])
+                    self.add_attribute(
+                        attr, r_meth=params["r_meth"], w_meth=params["w_meth"])
                 else:
                     self.add_attribute(attr, r_meth=params[
-                        "r_meth"])  
+                        "r_meth"])
             except Exception as e:
                 print(e)
 
