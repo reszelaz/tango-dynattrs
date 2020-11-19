@@ -1,8 +1,10 @@
 # Project to reproduce Sardana issue with highly dynamic attributes
 
+Code is authored by Henrik Enquist from MAXIV
+
 To repduce the issue:
 
-1.create the necessary elements in the Tango DB:
+1. Create the necessary elements in the Tango DB:
 ```
 tango_admin --add-server BuggyDS/test BuggyDS test/buggyds/1    
 tango_admin --add-server BuggyDS/test BuggyDS test/buggyds/2
@@ -29,6 +31,3 @@ DevError[
 severity = ERR]                                                                                                                            
 ]
 ```
-
-
-Code is authored by Henrik Enquist from MAXIV
